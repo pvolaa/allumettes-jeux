@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jeu d'allumettes</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer="defer"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Jeu d'allumettes</h1>
+            <p>Affronte l'ordinateur et sois le dernier à retirer une allumette !</p>
+        </header>
+
+        <main>
+            <section class="jeu">
+
+                <div class="informations">
+                    <p>Allumettes restantes :
+                        <span id="nombre-allumettes">17</span>
+                    </p>
+
+                    <p id="message">C'est à toi de jouer !</p>
+                </div>
+
+                <div class="choix-difficulte">
+                    <label for="difficulte">Difficulté :</label>
+
+                    <select id="difficulte">
+                        <option value="facile">Facile</option>
+                        <option value="moyen">Moyen</option>
+                        <option value="difficile">Difficile</option>
+                    </select>
+                </div>
+
+                <div id="allumettes" class="allumettes"></div>
+
+                <div class="commandes">
+                    <p>Combien d'allumettes veux-tu retirer ?</p>
+
+                    <button class="bouton-jeu" data-nombre="1">
+                        Retirer 1
+                    </button>
+
+                    <button class="bouton-jeu" data-nombre="2">
+                        Retirer 2
+                    </button>
+
+                    <button class="bouton-jeu" data-nombre="3">
+                        Retirer 3
+                    </button>
+                </div>
+
+                <button id="recommencer" class="bouton-recommencer">
+                    Recommencer la partie
+                </button>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>Jeu développé en HTML, CSS et JavaScript</p>
+        </footer>
+
+        <!-- Fenêtre de résultat -->
+
+        <div id="fenetre-resultat" class="fenetre-resultat hidden">
+
+            <div class="carte-resultat">
+
+                <div id="confettis" class="confettis"></div>
+
+                <p id="resultat-sous-titre" class="resultat-sous-titre">
+                    FIN DE LA PARTIE
+                </p>
+
+                <h2 id="resultat-titre">Félicitations !</h2>
+
+                <p id="resultat-message">
+                    Tu as remporté la partie !
+                </p>
+
+                <div class="boutons-resultat">
+
+                    <button id="rejouer" class="bouton-rejouer">
+                        Rejouer
+                    </button>
+
+                    <button id="quitter" class="bouton-quitter">
+                        Quitter la partie
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
